@@ -102,20 +102,19 @@ void abss(){
     scanf("%lf", &a);
 
     printf("Resultat: %.2lf", fabs(a));
+    sleep(2);
 }
 
 void exponant(){
-    int base, expo;
+    int num, expo;
     double result = 1.0;
 
-    printf("Entrer la base: ");
-    scanf("%d", &base);
-    printf("Entrer l'exposant");
+    printf("\nEntrer la base: ");
+    scanf("%d", &num);
+    printf("\nEntrer l'exposant: ");
     scanf("%d", &expo);
 
-    for(int i = 0; i < expo; i++) {
-        result *= base;
-    } printf("%d ^ %d = %.2lf\n", base, expo, result);
+    printf("%d ^ %d = %.2lf\n", num, expo, pow(num, expo));
     sleep(2);
 }
 
@@ -160,7 +159,7 @@ int main(){
         default:
             break;
         }
-    } while (choice != 9 || choice >10);
+    } while (choice != 9);
 
     return 0;
 }
